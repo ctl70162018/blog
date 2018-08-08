@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Broadfoot</title>
+<link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico">
+<script src= /js/jquery-3.3.1.min.js></script>
+
+<link rel="stylesheet" href=/assets/css/main.css>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+  <body>
+    <script>
+    jQuery('body').css('display', 'none');
+    jQuery(document).ready(function(){
+      jQuery('body').fadeIn();
+      jQuery('a').on('click', function(event) {
+        var thetarget = this.getAttribute('target')
+        if (thetarget != "_blank"){
+            var thehref = this.getAttribute('href')
+            event.preventDefault();
+              jQuery('body').fadeOut(function(){
+                //alert(thehref)
+                window.location = thehref
+              });
+
+        }
+      });
+    });
+
+setTimeout(function(){
+  jQuery('body').fadeIn();
+}, 1000)
+</script>
+
+<DOCTYPE html>
+
+<div class="contact__grid">
+
+
+<div class= "contact-me">
+<h1>Contact me. </h1>
+
+
+
+</div>
+<div class="form">
+<div class="form1">
+<form method="POST" action="https://formspree.io/david.broadfoot@mail.utoronto.ca">
+  <input type="email" name="email" placeholder="Your email"> <br>
+
+</div>
+  <div class="form2">
+  <textarea name="message" placeholder="Your lovely message"></textarea> </div>
+  <div class="form3"><button type="submit">Send</button> </div>
+</form>
+
+
+</div>
+
+
+<div class="navcontact1">
+  <a href="http://localhost:4000"><h1>Home</h1></a> <br> </div>
+<div class="navcontact2">
+
+  <a href="http://localhost:4000/blog"><h1>Blog</h1></a> </div>
+
+
+
+</div>
+</div>
+</html>
+
+
+
+
+
+</body>
+</html>
